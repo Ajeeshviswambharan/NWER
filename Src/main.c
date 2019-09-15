@@ -19,8 +19,8 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "cmsis_os.h"
+#include "user.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -42,8 +42,6 @@
 
 /* USER CODE END PM */
 
-/* Private variables ---------------------------------------------------------*/
-UART_HandleTypeDef huart2;
 
 osThreadId motorHandle;
 osThreadId sensorHandle;
@@ -60,6 +58,7 @@ static void MX_USART2_UART_Init(void);
 void motor_cyclic(void const * argument);
 void sensor_cyclic(void const * argument);
 void gps_cyclic(void const * argument);
+static bool shoutdown_flag;
 
 /* USER CODE BEGIN PFP */
 
@@ -140,11 +139,14 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  shoutdown_flag=start_init();
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
+  if(shoutdown_flag==false)
+  {
   osKernelStart();
-  
+  }
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
@@ -273,17 +275,13 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_motor_cyclic */
 void motor_cyclic(void const * argument)
 {
-    
-    
-    
-    
-    
 
   /* USER CODE BEGIN 5 */
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  motor_cyclic_uart_check();
   }
   /* USER CODE END 5 */ 
 }
@@ -298,10 +296,11 @@ void motor_cyclic(void const * argument)
 void sensor_cyclic(void const * argument)
 {
   /* USER CODE BEGIN sensor_cyclic */
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  sensor_cyclic_uart_check();
   }
   /* USER CODE END sensor_cyclic */
 }
@@ -316,10 +315,11 @@ void sensor_cyclic(void const * argument)
 void gps_cyclic(void const * argument)
 {
   /* USER CODE BEGIN gps_cyclic */
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  gps_cyclic_uart_check();
   }
   /* USER CODE END gps_cyclic */
 }

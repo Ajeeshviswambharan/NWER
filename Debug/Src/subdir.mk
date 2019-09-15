@@ -10,7 +10,8 @@ C_SRCS += \
 ../Src/stm32f0xx_hal_timebase_tim.c \
 ../Src/stm32f0xx_it.c \
 ../Src/syscalls.c \
-../Src/system_stm32f0xx.c 
+../Src/system_stm32f0xx.c \
+../Src/user.c 
 
 OBJS += \
 ./Src/freertos.o \
@@ -19,7 +20,8 @@ OBJS += \
 ./Src/stm32f0xx_hal_timebase_tim.o \
 ./Src/stm32f0xx_it.o \
 ./Src/syscalls.o \
-./Src/system_stm32f0xx.o 
+./Src/system_stm32f0xx.o \
+./Src/user.o 
 
 C_DEPS += \
 ./Src/freertos.d \
@@ -28,7 +30,8 @@ C_DEPS += \
 ./Src/stm32f0xx_hal_timebase_tim.d \
 ./Src/stm32f0xx_it.d \
 ./Src/syscalls.d \
-./Src/system_stm32f0xx.d 
+./Src/system_stm32f0xx.d \
+./Src/user.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

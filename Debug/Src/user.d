@@ -1,4 +1,4 @@
-Src/main.o: ../Src/main.c F:/Project/Projects_STM32/NWER/Inc/user.h \
+Src/user.o: ../Src/user.c F:/Project/Projects_STM32/NWER/Inc/user.h \
  F:/Project/Projects_STM32/NWER/Inc/main.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  F:/Project/Projects_STM32/NWER/Inc/stm32f0xx_hal_conf.h \
