@@ -19,10 +19,10 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include "user.h"
 
 
 /* Private includes ----------------------------------------------------------*/
+#include "user.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -42,24 +42,27 @@
 
 /* USER CODE END PM */
 
+/* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_rx;
 
 osThreadId motorHandle;
 osThreadId sensorHandle;
 osThreadId GPS_ValueHandle;
 osSemaphoreId uart_checkHandle;
 /* USER CODE BEGIN PV */
-
+static bool shoutdown_flag;
+uint8_t txData_start[35]="INTIAL CHECKING..................\r\n";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 void motor_cyclic(void const * argument);
 void sensor_cyclic(void const * argument);
 void gps_cyclic(void const * argument);
-static bool shoutdown_flag;
-
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,6 +101,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
@@ -139,16 +143,17 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  HAL_UART_Transmit(&huart2,txData_start,35,1);
+  osDelay(2000);
   shoutdown_flag=start_init();
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
   if(shoutdown_flag==false)
-  {
-  osKernelStart();
-  }
+  	  {
+	  	  osKernelStart();
+  	  }
   /* We should never get here as control is now taken by the scheduler */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -231,6 +236,22 @@ static void MX_USART2_UART_Init(void)
 
 }
 
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel4_5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_5_IRQn, 3, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_5_IRQn);
+
+}
+
 /**
   * @brief GPIO Initialization Function
   * @param None
@@ -275,7 +296,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_motor_cyclic */
 void motor_cyclic(void const * argument)
 {
-
+    
   /* USER CODE BEGIN 5 */
 
   /* Infinite loop */
