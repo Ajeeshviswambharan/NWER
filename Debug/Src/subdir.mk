@@ -6,6 +6,7 @@
 C_SRCS += \
 ../Src/freertos.c \
 ../Src/main.c \
+../Src/sensor.c \
 ../Src/stm32f0xx_hal_msp.c \
 ../Src/stm32f0xx_hal_timebase_tim.c \
 ../Src/stm32f0xx_it.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 OBJS += \
 ./Src/freertos.o \
 ./Src/main.o \
+./Src/sensor.o \
 ./Src/stm32f0xx_hal_msp.o \
 ./Src/stm32f0xx_hal_timebase_tim.o \
 ./Src/stm32f0xx_it.o \
@@ -26,6 +28,7 @@ OBJS += \
 C_DEPS += \
 ./Src/freertos.d \
 ./Src/main.d \
+./Src/sensor.d \
 ./Src/stm32f0xx_hal_msp.d \
 ./Src/stm32f0xx_hal_timebase_tim.d \
 ./Src/stm32f0xx_it.d \
