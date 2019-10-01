@@ -14,4 +14,5 @@ extern void motor_cyclic_uart_check(void);
 extern void sensor_cyclic_uart_check(void);
 extern void gps_cyclic_uart_check(void);
 void gps_valuereceive(void);
+void pir_iot_cyclic_check(void);
 void revert_state();

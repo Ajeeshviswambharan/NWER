@@ -22,9 +22,8 @@
 
 
 /* Private includes ----------------------------------------------------------*/
-#include "user.h"
 /* USER CODE BEGIN Includes */
-
+#include "user.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +48,7 @@ DMA_HandleTypeDef hdma_usart2_rx;
 osThreadId motorHandle;
 osThreadId sensorHandle;
 osThreadId GPS_ValueHandle;
+osThreadId PIR_IOTHandle;
 osSemaphoreId uart_checkHandle;
 /* USER CODE BEGIN PV */
 static bool shoutdown_flag;
@@ -63,6 +63,8 @@ static void MX_USART2_UART_Init(void);
 void motor_cyclic(void const * argument);
 void sensor_cyclic(void const * argument);
 void gps_cyclic(void const * argument);
+void pir_iot_cyclic(void const * argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -130,16 +132,20 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of motor */
-  osThreadDef(motor, motor_cyclic, osPriorityNormal, 0, 128);
+  osThreadDef(motor, motor_cyclic, osPriorityBelowNormal, 0, 128);
   motorHandle = osThreadCreate(osThread(motor), NULL);
 
   /* definition and creation of sensor */
-  osThreadDef(sensor, sensor_cyclic, osPriorityRealtime, 0, 128);
+  osThreadDef(sensor, sensor_cyclic, osPriorityAboveNormal, 0, 128);
   sensorHandle = osThreadCreate(osThread(sensor), NULL);
 
   /* definition and creation of GPS_Value */
-  osThreadDef(GPS_Value, gps_cyclic, osPriorityHigh, 0, 128);
+  osThreadDef(GPS_Value, gps_cyclic, osPriorityNormal, 0, 128);
   GPS_ValueHandle = osThreadCreate(osThread(GPS_Value), NULL);
+
+  /* definition and creation of PIR_IOT */
+  osThreadDef(PIR_IOT, pir_iot_cyclic, osPriorityHigh, 0, 128);
+  PIR_IOTHandle = osThreadCreate(osThread(PIR_IOT), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -149,11 +155,10 @@ int main(void)
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
-  if(shoutdown_flag==false)
-  	  {
-	  	  osKernelStart();
-  	  }
+  osKernelStart();
+  
   /* We should never get here as control is now taken by the scheduler */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -274,12 +279,22 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PA0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
   /*Configure GPIO pin : PA5 */
   GPIO_InitStruct.Pin = GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_1_IRQn, 3, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_1_IRQn);
 
 }
 
@@ -297,6 +312,12 @@ static void MX_GPIO_Init(void)
 void motor_cyclic(void const * argument)
 {
     
+    
+    
+    
+    
+    
+
   /* USER CODE BEGIN 5 */
 
   /* Infinite loop */
@@ -345,6 +366,25 @@ void gps_cyclic(void const * argument)
   /* USER CODE END gps_cyclic */
 }
 
+/* USER CODE BEGIN Header_pir_iot_cyclic */
+/**
+* @brief Function implementing the PIR_IOT thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_pir_iot_cyclic */
+void pir_iot_cyclic(void const * argument)
+{
+  /* USER CODE BEGIN pir_iot_cyclic */
+  /* Infinite loop */
+  for(;;)
+  {
+    vTaskSuspend(NULL);//Task will suspend itself
+    pir_iot_cyclic_check();
+  }
+  /* USER CODE END pir_iot_cyclic */
+}
+
 /**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM3 interrupt took place, inside
@@ -377,6 +417,29 @@ void Error_Handler(void)
 
   /* USER CODE END Error_Handler_Debug */
 }
+
+/******************************************************************************/
+/* STM32F0xx Peripheral Interrupt Handlers                                    */
+/* Add here the Interrupt Handlers for the used peripherals.                  */
+/* For the available peripheral interrupt handler names,                      */
+/* please refer to the startup file (startup_stm32f0xx.s).                    */
+/******************************************************************************/
+
+/**
+  * @brief This function handles EXTI line 0 and 1 interrupts.
+  */
+void EXTI0_1_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI0_1_IRQn 0 */
+  BaseType_t check_re;//Check the return value from the suspend
+  /* USER CODE END EXTI0_1_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
+  /* USER CODE BEGIN EXTI0_1_IRQn 1 */
+  check_re=xTaskResumeFromISR(PIR_IOTHandle);
+  portYIELD_FROM_ISR(check_re);
+  /* USER CODE END EXTI0_1_IRQn 1 */
+}
+
 
 #ifdef  USE_FULL_ASSERT
 /**
