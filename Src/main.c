@@ -311,12 +311,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_motor_cyclic */
 void motor_cyclic(void const * argument)
 {
-    
-    
-    
-    
-    
-    
 
   /* USER CODE BEGIN 5 */
 

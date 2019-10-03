@@ -17,14 +17,14 @@ c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.20
 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-memset.o)
                               c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o (memset)
 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-strstr.o)
-                              Src/sensor.o (strstr)
+                              Src/Sensor/sensor.o (strstr)
 
 Allocating common symbols
 Common symbol       size              file
 
 motorHandle         0x4               Src/main.o
 hdma_usart2_rx      0x44              Src/main.o
-rx_buffer_gps       0x19              Src/sensor.o
+rx_buffer_gps       0x19              Src/Sensor/sensor.o
 uwTick              0x4               Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
 xQueueRegistry      0x40              Middlewares/Third_Party/FreeRTOS/Source/queue.o
 pFlash              0x20              Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o
@@ -3541,6 +3541,160 @@ Discarded input sections
  .debug_macro   0x00000000      0x416 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
  .debug_macro   0x00000000       0xc0 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
  .debug_macro   0x00000000       0x8c Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .group         0x00000000        0xc Src/Sensor/sensor.o
+ .text          0x00000000        0x0 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0xa4e Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xb1 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x2e Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x22 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x22 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x8e Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x51 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xef Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x6a Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x1df Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x34 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x26 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x30d Src/Sensor/sensor.o
+ .debug_macro   0x00000000     0x6fa9 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x3c Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x5e Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x18 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x35 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x34 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x16 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x97 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x330 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xfd Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x10 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x58 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x1f Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x43 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x20 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x18e Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x10 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x1c Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x52 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x40 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x10 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x40 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xd7 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x1c Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x3d Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x16 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x16f Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x49 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x92f Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x180 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x13a Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xe5 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x1ed Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x34 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x43 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x28 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xb6 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x199 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x202 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x61 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x90 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x4d Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x2d Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x845 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x45 Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x37c Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x156 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xf8 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xbc Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x168 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xb6 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x10 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x1f Src/Sensor/sensor.o
+ .debug_macro   0x00000000      0x416 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xc0 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x8c Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x91 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x94 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x63 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x19 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0xcf Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x16 Src/Sensor/sensor.o
+ .debug_macro   0x00000000       0x35 Src/Sensor/sensor.o
  .group         0x00000000        0xc Src/freertos.o
  .group         0x00000000        0xc Src/freertos.o
  .group         0x00000000        0xc Src/freertos.o
@@ -3759,6 +3913,7 @@ Discarded input sections
  .text          0x00000000        0x0 Src/main.o
  .bss           0x00000000        0x0 Src/main.o
  .debug_macro   0x00000000      0xa4e Src/main.o
+ .debug_macro   0x00000000       0x22 Src/main.o
  .debug_macro   0x00000000       0xb1 Src/main.o
  .debug_macro   0x00000000       0x2e Src/main.o
  .debug_macro   0x00000000       0x22 Src/main.o
@@ -3832,161 +3987,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x63 Src/main.o
  .debug_macro   0x00000000       0x19 Src/main.o
  .debug_macro   0x00000000       0xcf Src/main.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .group         0x00000000        0xc Src/sensor.o
- .text          0x00000000        0x0 Src/sensor.o
- .debug_macro   0x00000000      0xa4e Src/sensor.o
- .debug_macro   0x00000000       0x22 Src/sensor.o
- .debug_macro   0x00000000       0xb1 Src/sensor.o
- .debug_macro   0x00000000       0x2e Src/sensor.o
- .debug_macro   0x00000000       0x22 Src/sensor.o
- .debug_macro   0x00000000       0x22 Src/sensor.o
- .debug_macro   0x00000000       0x8e Src/sensor.o
- .debug_macro   0x00000000       0x51 Src/sensor.o
- .debug_macro   0x00000000       0xef Src/sensor.o
- .debug_macro   0x00000000       0x6a Src/sensor.o
- .debug_macro   0x00000000      0x1df Src/sensor.o
- .debug_macro   0x00000000       0x34 Src/sensor.o
- .debug_macro   0x00000000       0x26 Src/sensor.o
- .debug_macro   0x00000000      0x30d Src/sensor.o
- .debug_macro   0x00000000     0x6fa9 Src/sensor.o
- .debug_macro   0x00000000       0x3c Src/sensor.o
- .debug_macro   0x00000000       0x5e Src/sensor.o
- .debug_macro   0x00000000       0x18 Src/sensor.o
- .debug_macro   0x00000000       0x35 Src/sensor.o
- .debug_macro   0x00000000       0x34 Src/sensor.o
- .debug_macro   0x00000000       0x16 Src/sensor.o
- .debug_macro   0x00000000       0x97 Src/sensor.o
- .debug_macro   0x00000000      0x330 Src/sensor.o
- .debug_macro   0x00000000       0xfd Src/sensor.o
- .debug_macro   0x00000000       0x10 Src/sensor.o
- .debug_macro   0x00000000       0x58 Src/sensor.o
- .debug_macro   0x00000000       0x1f Src/sensor.o
- .debug_macro   0x00000000       0x43 Src/sensor.o
- .debug_macro   0x00000000       0x20 Src/sensor.o
- .debug_macro   0x00000000      0x18e Src/sensor.o
- .debug_macro   0x00000000       0x10 Src/sensor.o
- .debug_macro   0x00000000       0x1c Src/sensor.o
- .debug_macro   0x00000000       0x52 Src/sensor.o
- .debug_macro   0x00000000       0x40 Src/sensor.o
- .debug_macro   0x00000000       0x10 Src/sensor.o
- .debug_macro   0x00000000       0x40 Src/sensor.o
- .debug_macro   0x00000000       0xd7 Src/sensor.o
- .debug_macro   0x00000000       0x1c Src/sensor.o
- .debug_macro   0x00000000       0x3d Src/sensor.o
- .debug_macro   0x00000000       0x16 Src/sensor.o
- .debug_macro   0x00000000      0x16f Src/sensor.o
- .debug_macro   0x00000000       0x49 Src/sensor.o
- .debug_macro   0x00000000      0x92f Src/sensor.o
- .debug_macro   0x00000000      0x180 Src/sensor.o
- .debug_macro   0x00000000      0x13a Src/sensor.o
- .debug_macro   0x00000000       0xe5 Src/sensor.o
- .debug_macro   0x00000000      0x1ed Src/sensor.o
- .debug_macro   0x00000000       0x34 Src/sensor.o
- .debug_macro   0x00000000       0x43 Src/sensor.o
- .debug_macro   0x00000000       0x28 Src/sensor.o
- .debug_macro   0x00000000       0xb6 Src/sensor.o
- .debug_macro   0x00000000      0x199 Src/sensor.o
- .debug_macro   0x00000000      0x202 Src/sensor.o
- .debug_macro   0x00000000       0x61 Src/sensor.o
- .debug_macro   0x00000000       0x90 Src/sensor.o
- .debug_macro   0x00000000       0x4d Src/sensor.o
- .debug_macro   0x00000000       0x2d Src/sensor.o
- .debug_macro   0x00000000      0x845 Src/sensor.o
- .debug_macro   0x00000000       0x45 Src/sensor.o
- .debug_macro   0x00000000      0x37c Src/sensor.o
- .debug_macro   0x00000000      0x156 Src/sensor.o
- .debug_macro   0x00000000       0xf8 Src/sensor.o
- .debug_macro   0x00000000       0xbc Src/sensor.o
- .debug_macro   0x00000000      0x168 Src/sensor.o
- .debug_macro   0x00000000       0xb6 Src/sensor.o
- .debug_macro   0x00000000       0x10 Src/sensor.o
- .debug_macro   0x00000000       0x1f Src/sensor.o
- .debug_macro   0x00000000      0x416 Src/sensor.o
- .debug_macro   0x00000000       0xc0 Src/sensor.o
- .debug_macro   0x00000000       0x8c Src/sensor.o
- .debug_macro   0x00000000       0x91 Src/sensor.o
- .debug_macro   0x00000000       0x94 Src/sensor.o
- .debug_macro   0x00000000       0x63 Src/sensor.o
- .debug_macro   0x00000000       0x19 Src/sensor.o
- .debug_macro   0x00000000       0xcf Src/sensor.o
- .debug_macro   0x00000000       0x16 Src/sensor.o
- .debug_macro   0x00000000       0x35 Src/sensor.o
  .group         0x00000000        0xc Src/stm32f0xx_hal_msp.o
  .group         0x00000000        0xc Src/stm32f0xx_hal_msp.o
  .group         0x00000000        0xc Src/stm32f0xx_hal_msp.o
@@ -4877,9 +4877,9 @@ LOAD Middlewares/Third_Party/FreeRTOS/Source/tasks.o
 LOAD Middlewares/Third_Party/FreeRTOS/Source/timers.o
 LOAD Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
 LOAD Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+LOAD Src/Sensor/sensor.o
 LOAD Src/freertos.o
 LOAD Src/main.o
-LOAD Src/sensor.o
 LOAD Src/stm32f0xx_hal_msp.o
 LOAD Src/stm32f0xx_hal_timebase_tim.o
 LOAD Src/stm32f0xx_it.o
@@ -5228,55 +5228,55 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  .text.vPortFree
                 0x0800250c       0x50 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
                 0x0800250c                vPortFree
- .text.vApplicationStackOverflowHook
-                0x0800255c        0x2 Src/freertos.o
-                0x0800255c                vApplicationStackOverflowHook
- *fill*         0x0800255e        0x2 
- .text.MX_GPIO_Init
-                0x08002560       0x9c Src/main.o
- .text.MX_DMA_Init
-                0x080025fc       0x30 Src/main.o
- .text.MX_USART2_UART_Init
-                0x0800262c       0x30 Src/main.o
- .text.motor_cyclic
-                0x0800265c        0x8 Src/main.o
-                0x0800265c                motor_cyclic
- .text.sensor_cyclic
-                0x08002664        0x8 Src/main.o
-                0x08002664                sensor_cyclic
- .text.gps_cyclic
-                0x0800266c        0x8 Src/main.o
-                0x0800266c                gps_cyclic
- .text.pir_iot_cyclic
-                0x08002674        0xe Src/main.o
-                0x08002674                pir_iot_cyclic
- .text.SystemClock_Config
-                0x08002682       0x4a Src/main.o
-                0x08002682                SystemClock_Config
- .text.main     0x080026cc       0xcc Src/main.o
-                0x080026cc                main
- .text.HAL_TIM_PeriodElapsedCallback
-                0x08002798       0x18 Src/main.o
-                0x08002798                HAL_TIM_PeriodElapsedCallback
- .text.Error_Handler
-                0x080027b0        0x2 Src/main.o
-                0x080027b0                Error_Handler
- *fill*         0x080027b2        0x2 
- .text.EXTI0_1_IRQHandler
-                0x080027b4       0x28 Src/main.o
-                0x080027b4                EXTI0_1_IRQHandler
  .text.gps_valuereceive
-                0x080027dc       0x18 Src/sensor.o
-                0x080027dc                gps_valuereceive
+                0x0800255c       0x18 Src/Sensor/sensor.o
+                0x0800255c                gps_valuereceive
  .text.message_handle
-                0x080027f4       0x78 Src/sensor.o
-                0x080027f4                message_handle
+                0x08002574       0x78 Src/Sensor/sensor.o
+                0x08002574                message_handle
  .text.HAL_UART_RxCpltCallback
-                0x0800286c       0x6c Src/sensor.o
-                0x0800286c                HAL_UART_RxCpltCallback
+                0x080025ec       0x6c Src/Sensor/sensor.o
+                0x080025ec                HAL_UART_RxCpltCallback
  .text.revert_state
-                0x080028d8       0x3c Src/sensor.o
-                0x080028d8                revert_state
+                0x08002658       0x3c Src/Sensor/sensor.o
+                0x08002658                revert_state
+ .text.vApplicationStackOverflowHook
+                0x08002694        0x2 Src/freertos.o
+                0x08002694                vApplicationStackOverflowHook
+ *fill*         0x08002696        0x2 
+ .text.MX_GPIO_Init
+                0x08002698       0x9c Src/main.o
+ .text.MX_DMA_Init
+                0x08002734       0x30 Src/main.o
+ .text.MX_USART2_UART_Init
+                0x08002764       0x30 Src/main.o
+ .text.motor_cyclic
+                0x08002794        0x8 Src/main.o
+                0x08002794                motor_cyclic
+ .text.sensor_cyclic
+                0x0800279c        0x8 Src/main.o
+                0x0800279c                sensor_cyclic
+ .text.gps_cyclic
+                0x080027a4        0x8 Src/main.o
+                0x080027a4                gps_cyclic
+ .text.pir_iot_cyclic
+                0x080027ac        0xe Src/main.o
+                0x080027ac                pir_iot_cyclic
+ .text.SystemClock_Config
+                0x080027ba       0x4a Src/main.o
+                0x080027ba                SystemClock_Config
+ .text.main     0x08002804       0xcc Src/main.o
+                0x08002804                main
+ .text.HAL_TIM_PeriodElapsedCallback
+                0x080028d0       0x18 Src/main.o
+                0x080028d0                HAL_TIM_PeriodElapsedCallback
+ .text.Error_Handler
+                0x080028e8        0x2 Src/main.o
+                0x080028e8                Error_Handler
+ *fill*         0x080028ea        0x2 
+ .text.EXTI0_1_IRQHandler
+                0x080028ec       0x28 Src/main.o
+                0x080028ec                EXTI0_1_IRQHandler
  .text.HAL_MspInit
                 0x08002914       0x3c Src/stm32f0xx_hal_msp.o
                 0x08002914                HAL_MspInit
@@ -5393,10 +5393,10 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x08002d64        0x5 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  *fill*         0x08002d69        0x3 
  .rodata.str1.4
-                0x08002d6c       0x22 Src/main.o
- *fill*         0x08002d8e        0x2 
+                0x08002d6c       0x10 Src/Sensor/sensor.o
  .rodata.str1.4
-                0x08002d90       0x10 Src/sensor.o
+                0x08002d7c       0x24 Src/main.o
+                                 0x22 (size before relaxing)
                 0x08002da0                . = ALIGN (0x4)
 
 .rel.dyn        0x08002da0        0x0
@@ -5435,15 +5435,15 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x20000000                _sdata = .
  *(.data)
  .data          0x20000000        0x4 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
- .data          0x20000004       0x23 Src/main.o
-                0x20000004                txData_start
- *fill*         0x20000027        0x1 
- .data          0x20000028       0x6d Src/sensor.o
-                0x20000028                rxData_ledon
-                0x20000048                rxData_ledoz
-                0x2000006c                rxData_wrong
-                0x20000084                rxData_ledou
- *fill*         0x20000095        0x3 
+ .data          0x20000004       0x6d Src/Sensor/sensor.o
+                0x20000004                rxData_ledon
+                0x20000024                rxData_ledoz
+                0x20000048                rxData_wrong
+                0x20000060                rxData_ledou
+ *fill*         0x20000071        0x3 
+ .data          0x20000074       0x23 Src/main.o
+                0x20000074                txData_start
+ *fill*         0x20000097        0x1 
  .data          0x20000098        0x4 Src/system_stm32f0xx.o
                 0x20000098                SystemCoreClock
  .data          0x2000009c       0x43 Src/user.o
@@ -5468,23 +5468,23 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  .bss           0x200000fc      0x12c Middlewares/Third_Party/FreeRTOS/Source/tasks.o
                 0x20000170                pxCurrentTCB
  .bss           0x20000228      0xc18 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .bss           0x20000e40        0x1 Src/sensor.o
+ .bss           0x20000e40        0x1 Src/Sensor/sensor.o
  *(.bss*)
  *(COMMON)
  *fill*         0x20000e41        0x3 
  COMMON         0x20000e44        0x4 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
                 0x20000e44                uwTick
- COMMON         0x20000e48       0xc8 Src/main.o
-                0x20000e48                motorHandle
-                0x20000e4c                hdma_usart2_rx
-                0x20000e90                PIR_IOTHandle
-                0x20000e94                GPS_ValueHandle
-                0x20000e98                huart2
-                0x20000f08                uart_checkHandle
-                0x20000f0c                sensorHandle
- COMMON         0x20000f10       0x19 Src/sensor.o
-                0x20000f10                rx_buffer_gps
- *fill*         0x20000f29        0x3 
+ COMMON         0x20000e48       0x19 Src/Sensor/sensor.o
+                0x20000e48                rx_buffer_gps
+ *fill*         0x20000e61        0x3 
+ COMMON         0x20000e64       0xc8 Src/main.o
+                0x20000e64                motorHandle
+                0x20000e68                hdma_usart2_rx
+                0x20000eac                PIR_IOTHandle
+                0x20000eb0                GPS_ValueHandle
+                0x20000eb4                huart2
+                0x20000f24                uart_checkHandle
+                0x20000f28                sensorHandle
  COMMON         0x20000f2c       0x40 Src/stm32f0xx_hal_timebase_tim.o
                 0x20000f2c                htim3
                 0x20000f6c                . = ALIGN (0x4)
@@ -5544,11 +5544,11 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  .ARM.attributes
                 0x000002c7       0x31 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
  .ARM.attributes
-                0x000002f8       0x31 Src/freertos.o
+                0x000002f8       0x31 Src/Sensor/sensor.o
  .ARM.attributes
-                0x00000329       0x31 Src/main.o
+                0x00000329       0x31 Src/freertos.o
  .ARM.attributes
-                0x0000035a       0x31 Src/sensor.o
+                0x0000035a       0x31 Src/main.o
  .ARM.attributes
                 0x0000038b       0x31 Src/stm32f0xx_hal_msp.o
  .ARM.attributes
@@ -5592,9 +5592,9 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_info    0x0001084c     0x23ee Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_info    0x00012c3a      0x2a9 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_info    0x00012ee3      0xba7 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x00013a8a      0x956 Src/freertos.o
- .debug_info    0x000143e0     0x1c6b Src/main.o
- .debug_info    0x0001604b     0x11c1 Src/sensor.o
+ .debug_info    0x00013a8a     0x11c1 Src/Sensor/sensor.o
+ .debug_info    0x00014c4b      0x956 Src/freertos.o
+ .debug_info    0x000155a1     0x1c6b Src/main.o
  .debug_info    0x0001720c     0x129f Src/stm32f0xx_hal_msp.o
  .debug_info    0x000184ab     0x110f Src/stm32f0xx_hal_timebase_tim.o
  .debug_info    0x000195ba      0xe1e Src/stm32f0xx_it.o
@@ -5617,9 +5617,9 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_abbrev  0x00001fd4      0x32d Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_abbrev  0x00002301      0x197 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_abbrev  0x00002498      0x2c8 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_abbrev  0x00002760      0x1bb Src/freertos.o
- .debug_abbrev  0x0000291b      0x340 Src/main.o
- .debug_abbrev  0x00002c5b      0x28b Src/sensor.o
+ .debug_abbrev  0x00002760      0x28b Src/Sensor/sensor.o
+ .debug_abbrev  0x000029eb      0x1bb Src/freertos.o
+ .debug_abbrev  0x00002ba6      0x340 Src/main.o
  .debug_abbrev  0x00002ee6      0x272 Src/stm32f0xx_hal_msp.o
  .debug_abbrev  0x00003158      0x2aa Src/stm32f0xx_hal_timebase_tim.o
  .debug_abbrev  0x00003402      0x221 Src/stm32f0xx_it.o
@@ -5642,8 +5642,8 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_loc     0x00009848     0x15c9 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_loc     0x0000ae11       0xa6 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_loc     0x0000aeb7      0x28e Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_loc     0x0000b145       0xbe Src/main.o
- .debug_loc     0x0000b203       0x8a Src/sensor.o
+ .debug_loc     0x0000b145       0x8a Src/Sensor/sensor.o
+ .debug_loc     0x0000b1cf       0xbe Src/main.o
  .debug_loc     0x0000b28d       0x79 Src/stm32f0xx_hal_msp.o
  .debug_loc     0x0000b306       0x79 Src/stm32f0xx_hal_timebase_tim.o
  .debug_loc     0x0000b37f      0x13b Src/system_stm32f0xx.o
@@ -5679,11 +5679,11 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_aranges
                 0x00000e30       0x50 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
  .debug_aranges
-                0x00000e80       0x20 Src/freertos.o
+                0x00000e80       0x38 Src/Sensor/sensor.o
  .debug_aranges
-                0x00000ea0       0x78 Src/main.o
+                0x00000eb8       0x20 Src/freertos.o
  .debug_aranges
-                0x00000f18       0x38 Src/sensor.o
+                0x00000ed8       0x78 Src/main.o
  .debug_aranges
                 0x00000f50       0x30 Src/stm32f0xx_hal_msp.o
  .debug_aranges
@@ -5712,9 +5712,9 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_ranges  0x00000c68      0x200 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_ranges  0x00000e68       0x78 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_ranges  0x00000ee0       0x40 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_ranges  0x00000f20       0x10 Src/freertos.o
- .debug_ranges  0x00000f30       0x68 Src/main.o
- .debug_ranges  0x00000f98       0x28 Src/sensor.o
+ .debug_ranges  0x00000f20       0x28 Src/Sensor/sensor.o
+ .debug_ranges  0x00000f48       0x10 Src/freertos.o
+ .debug_ranges  0x00000f58       0x68 Src/main.o
  .debug_ranges  0x00000fc0       0x20 Src/stm32f0xx_hal_msp.o
  .debug_ranges  0x00000fe0       0x20 Src/stm32f0xx_hal_timebase_tim.o
  .debug_ranges  0x00001000       0x28 Src/stm32f0xx_it.o
@@ -5819,18 +5819,18 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_macro   0x0000e0da       0x10 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_macro   0x0000e0ea      0x13d Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_macro   0x0000e227      0x1a2 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_macro   0x0000e3c9      0x372 Src/freertos.o
- .debug_macro   0x0000e73b       0x3a Src/freertos.o
- .debug_macro   0x0000e775      0x3d0 Src/main.o
- .debug_macro   0x0000eb45       0x22 Src/main.o
- .debug_macro   0x0000eb67      0x3ff Src/sensor.o
+ .debug_macro   0x0000e3c9      0x3ff Src/Sensor/sensor.o
+ .debug_macro   0x0000e7c8       0x22 Src/Sensor/sensor.o
+ .debug_macro   0x0000e7ea      0x372 Src/freertos.o
+ .debug_macro   0x0000eb5c       0x3a Src/freertos.o
+ .debug_macro   0x0000eb96      0x3d0 Src/main.o
  .debug_macro   0x0000ef66      0x30f Src/stm32f0xx_hal_msp.o
  .debug_macro   0x0000f275      0x305 Src/stm32f0xx_hal_timebase_tim.o
  .debug_macro   0x0000f57a      0x382 Src/stm32f0xx_it.o
  .debug_macro   0x0000f8fc      0x305 Src/system_stm32f0xx.o
  .debug_macro   0x0000fc01      0x3d0 Src/user.o
 
-.debug_line     0x00000000     0xdd98
+.debug_line     0x00000000     0xdd9d
  .debug_line    0x00000000      0x8b6 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_line    0x000008b6      0x8af Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_line    0x00001165      0x98e Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o
@@ -5845,17 +5845,17 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_line    0x00007e7f      0xdec Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_line    0x00008c6b      0x57b Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_line    0x000091e6      0x5f5 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x000097db      0x872 Src/freertos.o
- .debug_line    0x0000a04d      0xa50 Src/main.o
- .debug_line    0x0000aa9d      0x9d1 Src/sensor.o
- .debug_line    0x0000b46e      0x799 Src/stm32f0xx_hal_msp.o
- .debug_line    0x0000bc07      0x772 Src/stm32f0xx_hal_timebase_tim.o
- .debug_line    0x0000c379      0x8be Src/stm32f0xx_it.o
- .debug_line    0x0000cc37      0x76f Src/system_stm32f0xx.o
- .debug_line    0x0000d3a6      0x96f Src/user.o
- .debug_line    0x0000dd15       0x83 startup/startup_stm32f030x8.o
+ .debug_line    0x000097db      0x9d8 Src/Sensor/sensor.o
+ .debug_line    0x0000a1b3      0x872 Src/freertos.o
+ .debug_line    0x0000aa25      0xa4e Src/main.o
+ .debug_line    0x0000b473      0x799 Src/stm32f0xx_hal_msp.o
+ .debug_line    0x0000bc0c      0x772 Src/stm32f0xx_hal_timebase_tim.o
+ .debug_line    0x0000c37e      0x8be Src/stm32f0xx_it.o
+ .debug_line    0x0000cc3c      0x76f Src/system_stm32f0xx.o
+ .debug_line    0x0000d3ab      0x96f Src/user.o
+ .debug_line    0x0000dd1a       0x83 startup/startup_stm32f030x8.o
 
-.debug_str      0x00000000    0x50e6f
+.debug_str      0x00000000    0x50e76
  .debug_str     0x00000000    0x46812 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
                               0x46aba (size before relaxing)
  .debug_str     0x00046812      0x1ef Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
@@ -5884,23 +5884,23 @@ OUTPUT(NWER.elf elf32-littlearm)
                                0x75b1 (size before relaxing)
  .debug_str     0x00050744      0x243 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
                                0x9fa3 (size before relaxing)
- .debug_str     0x00050987       0x1c Src/freertos.o
-                              0x49757 (size before relaxing)
- .debug_str     0x000509a3      0x25c Src/main.o
-                              0x4c2ff (size before relaxing)
- .debug_str     0x00050bff       0xc1 Src/sensor.o
-                              0x4ba5d (size before relaxing)
- .debug_str     0x00050cc0       0x1b Src/stm32f0xx_hal_msp.o
-                              0x46cba (size before relaxing)
- .debug_str     0x00050cdb       0x50 Src/stm32f0xx_hal_timebase_tim.o
-                              0x46c21 (size before relaxing)
- .debug_str     0x00050d2b       0x56 Src/stm32f0xx_it.o
-                              0x49b67 (size before relaxing)
- .debug_str     0x00050d81       0x5a Src/system_stm32f0xx.o
-                              0x465b3 (size before relaxing)
- .debug_str     0x00050ddb       0x65 Src/user.o
+ .debug_str     0x00050987      0x12e Src/Sensor/sensor.o
                               0x4ba64 (size before relaxing)
- .debug_str     0x00050e40       0x2f startup/startup_stm32f030x8.o
+ .debug_str     0x00050ab5       0x12 Src/freertos.o
+                              0x49757 (size before relaxing)
+ .debug_str     0x00050ac7      0x200 Src/main.o
+                              0x4c2ff (size before relaxing)
+ .debug_str     0x00050cc7       0x1b Src/stm32f0xx_hal_msp.o
+                              0x46cba (size before relaxing)
+ .debug_str     0x00050ce2       0x50 Src/stm32f0xx_hal_timebase_tim.o
+                              0x46c21 (size before relaxing)
+ .debug_str     0x00050d32       0x56 Src/stm32f0xx_it.o
+                              0x49b67 (size before relaxing)
+ .debug_str     0x00050d88       0x5a Src/system_stm32f0xx.o
+                              0x465b3 (size before relaxing)
+ .debug_str     0x00050de2       0x65 Src/user.o
+                              0x4ba64 (size before relaxing)
+ .debug_str     0x00050e47       0x2f startup/startup_stm32f030x8.o
                                  0x54 (size before relaxing)
 
 .comment        0x00000000       0x7f
@@ -5919,9 +5919,9 @@ OUTPUT(NWER.elf elf32-littlearm)
  .comment       0x0000007f       0x80 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .comment       0x0000007f       0x80 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .comment       0x0000007f       0x80 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .comment       0x0000007f       0x80 Src/Sensor/sensor.o
  .comment       0x0000007f       0x80 Src/freertos.o
  .comment       0x0000007f       0x80 Src/main.o
- .comment       0x0000007f       0x80 Src/sensor.o
  .comment       0x0000007f       0x80 Src/stm32f0xx_hal_msp.o
  .comment       0x0000007f       0x80 Src/stm32f0xx_hal_timebase_tim.o
  .comment       0x0000007f       0x80 Src/stm32f0xx_it.o
@@ -5943,9 +5943,9 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_frame   0x0000202c      0x490 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_frame   0x000024bc      0x110 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_frame   0x000025cc       0xa8 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_frame   0x00002674       0x20 Src/freertos.o
- .debug_frame   0x00002694      0x13c Src/main.o
- .debug_frame   0x000027d0       0x70 Src/sensor.o
+ .debug_frame   0x00002674       0x70 Src/Sensor/sensor.o
+ .debug_frame   0x000026e4       0x20 Src/freertos.o
+ .debug_frame   0x00002704      0x13c Src/main.o
  .debug_frame   0x00002840       0x5c Src/stm32f0xx_hal_msp.o
  .debug_frame   0x0000289c       0x48 Src/stm32f0xx_hal_timebase_tim.o
  .debug_frame   0x000028e4       0x60 Src/stm32f0xx_it.o
