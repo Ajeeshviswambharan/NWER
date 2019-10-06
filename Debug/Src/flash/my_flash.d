@@ -1,6 +1,5 @@
-Src/sensor.o: ../Src/sensor.c F:/Project/Projects_STM32/NWER/Inc/sensor.h \
- F:/Project/Projects_STM32/NWER/Inc/user.h \
- F:/Project/Projects_STM32/NWER/Inc/main.h \
+Src/flash/my_flash.o: ../Src/flash/my_flash.c \
+ F:/Project/Projects_STM32/NWER/Inc/MY_FLASH.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  F:/Project/Projects_STM32/NWER/Inc/stm32f0xx_hal_conf.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
@@ -27,30 +26,9 @@ Src/sensor.o: ../Src/sensor.c F:/Project/Projects_STM32/NWER/Inc/sensor.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
- F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
- F:/Project/Projects_STM32/NWER/Inc/FreeRTOSConfig.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 
-F:/Project/Projects_STM32/NWER/Inc/sensor.h:
-
-F:/Project/Projects_STM32/NWER/Inc/user.h:
-
-F:/Project/Projects_STM32/NWER/Inc/main.h:
+F:/Project/Projects_STM32/NWER/Inc/MY_FLASH.h:
 
 F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 
@@ -105,37 +83,3 @@ F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_ti
 F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:
 
 F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
-
-F:/Project/Projects_STM32/NWER/Inc/FreeRTOSConfig.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
-
-F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:

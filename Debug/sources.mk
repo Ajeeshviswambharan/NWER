@@ -21,6 +21,7 @@ Middlewares/Third_Party/FreeRTOS/Source \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
 Src/Sensor \
+Src/flash \
 Src \
 startup \
 

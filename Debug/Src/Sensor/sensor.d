@@ -45,7 +45,8 @@ Src/Sensor/sensor.o: ../Src/Sensor/sensor.c \
  F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ F:/Project/Projects_STM32/NWER/Inc/my_flash.h
 
 F:/Project/Projects_STM32/NWER/Inc/sensor.h:
 
@@ -140,3 +141,5 @@ F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/q
 F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 
 F:/Project/Projects_STM32/NWER/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+F:/Project/Projects_STM32/NWER/Inc/my_flash.h:
