@@ -41,7 +41,7 @@ void MY_FLASH_SetSectorAddrs(uint8_t sector, uint32_t addrs)
 	MY_SectorAddrs = addrs;
 }
 //3. Write Flash
-void MY_FLASH_WriteN(uint32_t idx, void *wrBuf, uint32_t Nsize, DataTypeDef dataType)
+void MY_FLASH_WriteN(uint32_t idx, waypoint_info *wrBuf[][WAY_DETAILS], uint32_t Nsize, DataTypeDef dataType)
 {
 	uint32_t flashAddress = MY_SectorAddrs + idx;
 	uint32_t error_c;
@@ -72,45 +72,48 @@ void MY_FLASH_WriteN(uint32_t idx, void *wrBuf, uint32_t Nsize, DataTypeDef data
 			break;
 
 		case DATA_TYPE_32:
-				for(uint32_t i=0; i<Nsize; i++)
-				{
-					HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, flashAddress , ((uint32_t *)wrBuf)[i]);
+            for(uint32_t i=0;i<Nsize;i++)
+           {
+               for(uint32_t j=0;j<WAY_DETAILS;j++)
+               {
+					HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, flashAddress , *(*(wrBuf+i)+j));
 					flashAddress+=4;
 				}
+           }
 			break;
 	}
 	//Lock the Flash space
 	HAL_FLASH_Lock();
 }
 //4. Read Flash
-void MY_FLASH_ReadN(uint32_t idx, void *rdBuf, uint32_t Nsize, DataTypeDef dataType)
-{
-	uint32_t flashAddress = MY_SectorAddrs + idx;
-
-	switch(dataType)
-	{
-		case DATA_TYPE_8:
-				for(uint32_t i=0; i<Nsize; i++)
-				{
-					*((uint8_t *)rdBuf + i) = *(uint8_t *)flashAddress;
-					flashAddress++;
-				}
-			break;
-
-		case DATA_TYPE_16:
-				for(uint32_t i=0; i<Nsize; i++)
-				{
-					*((uint16_t *)rdBuf + i) = *(uint16_t *)flashAddress;
-					flashAddress+=2;
-				}
-			break;
-
-		case DATA_TYPE_32:
-				for(uint32_t i=0; i<Nsize; i++)
-				{
-					*((uint32_t *)rdBuf + i) = *(uint32_t *)flashAddress;
-					flashAddress+=4;
-				}
-			break;
-	}
-}
+//void MY_FLASH_ReadN(uint32_t idx, void *rdBuf, uint32_t Nsize, DataTypeDef dataType)
+//{
+//	uint32_t flashAddress = MY_SectorAddrs + idx;
+//
+//	switch(dataType)
+//	{
+//		case DATA_TYPE_8:
+//				for(uint32_t i=0; i<Nsize; i++)
+//				{
+//					*((uint8_t *)rdBuf + i) = *(uint8_t *)flashAddress;
+//					flashAddress++;
+//				}
+//			break;
+//
+//		case DATA_TYPE_16:
+//				for(uint32_t i=0; i<Nsize; i++)
+//				{
+//					*((uint16_t *)rdBuf + i) = *(uint16_t *)flashAddress;
+//					flashAddress+=2;
+//				}
+//			break;
+//
+//		case DATA_TYPE_32:
+//				for(uint32_t i=0; i<Nsize; i++)
+//				{
+//					*((uint32_t *)rdBuf + i) = *(uint32_t *)flashAddress;
+//					flashAddress+=4;
+//				}
+//			break;
+//	}
+//}
