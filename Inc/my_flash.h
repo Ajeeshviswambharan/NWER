@@ -50,6 +50,7 @@ typedef struct
 	uint8_t prvious_index;
 }waypoint_info;
 extern waypoint_info my_way_poits[TOTAL_POINTS];
+extern waypoint_info my_way_poits_r[TOTAL_POINTS];
 void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS]);
 
 //functions prototypes
@@ -61,7 +62,7 @@ void MY_FLASH_SetSectorAddrs(uint8_t sector, uint32_t addrs);
 //3. Write Flash
 void MY_FLASH_WriteN(uint32_t idx, waypoint_info *wrBuf[][WAY_DETAILS], uint32_t Nsize, DataTypeDef dataType);
 //4. Read Flash
-void MY_FLASH_ReadN(uint32_t idx,waypoint_info *wrBuf[][WAY_DETAILS], uint32_t Nsize, DataTypeDef dataType);
+void MY_FLASH_ReadN(uint32_t idx,waypoint_info *rdBuf[][WAY_DETAILS], uint32_t Nsize, DataTypeDef dataType);
 
 
 

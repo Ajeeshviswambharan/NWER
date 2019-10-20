@@ -20,6 +20,7 @@ uint8_t rxData_ledoz[33]="ZERO RECEIVED SO LED WILL OFF\r\n";
 uint8_t rxData_ledou[17]="UNKNOWN ENTRY\r\n";
 uint8_t rxData_wrong[24]="WRONG DATA...........\r\n";
 waypoint_info my_way_poits[TOTAL_POINTS];
+waypoint_info my_way_poits_r[TOTAL_POINTS];
 
 /* USER CODE BEGIN Includes */
 void gps_valuereceive(void)/* GPS value read */
@@ -42,7 +43,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   store_waypoit_D(my_way_poits);
   MY_FLASH_SetSectorAddrs(15,0x0800F000);
   MY_FLASH_WriteN(0,my_way_poits,TOTAL_POINTS,DATA_TYPE_32);
-//  MY_FLASH_ReadN(0,my_test_read,180,DATA_TYPE_32);
+  MY_FLASH_ReadN(0,my_way_poits_r,TOTAL_POINTS,DATA_TYPE_32);//Read the Flahs values for GPS
     switch (my_uart_se)
     {
     case UART_CHECK:        /* constant-expression */
@@ -129,12 +130,12 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
     {
                 for(uint32_t i=0;i<TOTAL_POINTS;i++)
                     {
-                        wpoints[i].index =1;
+                        wpoints[i].index =6;
                         wpoints[i].my_wheel_heading =REVERSE;
                         wpoints[i].heading_angle =360;
                         wpoints[i].longitude_value =5;
                         wpoints[i].latitude_value =6;
-                        wpoints[i].prvious_index =1;
+                        wpoints[i].prvious_index =5;
                     }
 
     }

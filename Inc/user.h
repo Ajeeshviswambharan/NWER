@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "main.h"
 #include "cmsis_os.h"
-
+#include "my_flash.h"
 /*variables Declaration*/
 
 extern UART_HandleTypeDef huart2;

@@ -2,7 +2,7 @@
 /* Private includes ----------------------------------------------------------*/
 #include "user.h"
 #include <string.h>
-#include "my_flash.h"
+
 /* USER CODE BEGIN Includes */
 /* Exported macro ------------------------------------------------------------*/
 typedef enum
