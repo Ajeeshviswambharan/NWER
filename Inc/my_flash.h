@@ -21,7 +21,7 @@ Description:
 //Typedefs
 //1. data size
 #define TOTAL_POINTS 30
-#define WAY_DETAILS 6
+#define WAY_DETAILS 8
 
 typedef enum
 {
@@ -42,12 +42,14 @@ typedef enum
 
 typedef struct
 {
-	uint8_t index;
+	uint32_t index;
 	wheel_heading my_wheel_heading;
-	int16_t heading_angle;
-	uint32_t longitude_value;
-	uint32_t latitude_value;
-	uint8_t prvious_index;
+	int32_t heading_angle;
+	uint32_t c_longitude_value;
+	uint32_t c_latitude_value;
+	uint32_t n_longitude_value;
+	uint32_t n_latitude_value;
+	uint32_t prvious_index;
 }waypoint_info;
 extern waypoint_info my_way_poits[TOTAL_POINTS];
 extern waypoint_info my_way_poits_r[TOTAL_POINTS];

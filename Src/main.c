@@ -148,6 +148,8 @@ int main(void)
   PIR_IOTHandle = osThreadCreate(osThread(PIR_IOT), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
+  MY_FLASH_SetSectorAddrs(15,0x0800F000);
+  MY_FLASH_ReadN(0,my_way_poits_r,TOTAL_POINTS,DATA_TYPE_32);//Read the Flahs values for GPS
   /* add threads, ... */
   HAL_UART_Transmit(&huart2,txData_start,35,1);
   osDelay(2000);

@@ -22,6 +22,7 @@ Description:
 //Private variables
 static uint32_t MY_SectorAddrs;
 static uint8_t MY_SectorNum;
+volatile uint32_t wdata;
 //1. sector start address
 void MY_FLASH_EraseSector(uint32_t PageAddress)
 {
@@ -109,14 +110,15 @@ void MY_FLASH_ReadN(uint32_t idx, waypoint_info *rdBuf[][WAY_DETAILS], uint32_t 
 			break;
 
 		case DATA_TYPE_32:
-				for(uint32_t i=0; i<Nsize; i++)
-				{
-					for(uint32_t j=0; j<WAY_DETAILS; j++)
-						{
-							*(*(rdBuf+i)+j) = *(uint32_t *)flashAddress;
-								flashAddress+=4;
-						}
-				}
+			for(uint32_t i=0;i<Nsize;i++)
+			{
+				for(uint32_t j=0;j<WAY_DETAILS;j++)
+					{
+						*(*(rdBuf+i)+j) = *(uint32_t *)flashAddress;
+					//	rdBuf[i][j]=wdata;
+						flashAddress+=4;
+					}
+			}
 			break;
 	}
 }
