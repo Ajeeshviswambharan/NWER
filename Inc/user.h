@@ -11,8 +11,8 @@ extern DMA_HandleTypeDef hdma_usart2_rx;
 /*function declaration */
 extern bool start_init(void);
 extern void motor_cyclic_uart_check(void);
-extern void sensor_cyclic_uart_check(void);
-extern void gps_cyclic_uart_check(void);
+extern void joystick_cyclic_uart_check(void);
+extern void spi_cyclic_check(void);
 void gps_valuereceive(void);
 void pir_iot_cyclic_check(void);
 void revert_state();

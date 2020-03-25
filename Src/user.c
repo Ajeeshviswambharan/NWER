@@ -13,7 +13,7 @@
 UART_HandleTypeDef huart2;
 uint8_t txData_motor[14]="Motor Cyclic\r\n";
 uint8_t txData_sensor[16]="Sensor Cyclic\r\n";
-uint8_t txData_gps[14]="GPS Cyclic\r\n";
+uint8_t txData_gps[14]="SPI Cyclic\r\n";
 uint8_t txData_pir_iot[19]="PIR_IOT Cyclic\r\n";
 /*User functins updated here*****************************************/
 bool start_init(void) /*For check the Inital sensor status*/
@@ -46,7 +46,7 @@ void motor_cyclic_uart_check(void)  /*cyclic UART check for motor check must be 
 	   	HAL_UART_Transmit(&huart2,txData_motor,14,1);
 	    osDelay(2000);
     }
-void sensor_cyclic_uart_check(void)  /*cyclic UART check for sensor check must be delete*/
+void joystick_cyclic_uart_check(void)  /*cyclic UART,update for Joystick input*/
 	{
 		HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
 		HAL_UART_Transmit(&huart2,txData_sensor,16,1);
@@ -54,7 +54,7 @@ void sensor_cyclic_uart_check(void)  /*cyclic UART check for sensor check must b
 		gps_valuereceive();
 		revert_state();
 	}
-void gps_cyclic_uart_check(void)  /*cyclic UART check for gps check*/
+void spi_cyclic_check(void)  /*SPI Update*/
 	{
 		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
 		HAL_UART_Transmit(&huart2,txData_gps,14,1);

@@ -135,11 +135,11 @@ int main(void)
   osThreadDef(motor, motor_cyclic, osPriorityBelowNormal, 0, 128);
   motorHandle = osThreadCreate(osThread(motor), NULL);
 
-  /* definition and creation of sensor */
+  /* definition and creation of Joystick values */
   osThreadDef(sensor, sensor_cyclic, osPriorityAboveNormal, 0, 128);
   sensorHandle = osThreadCreate(osThread(sensor), NULL);
 
-  /* definition and creation of GPS_Value */
+  /* definition and creation of SPI values */
   osThreadDef(GPS_Value, gps_cyclic, osPriorityNormal, 0, 128);
   GPS_ValueHandle = osThreadCreate(osThread(GPS_Value), NULL);
 
@@ -331,6 +331,7 @@ void motor_cyclic(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_sensor_cyclic */
+/* Joystick read */
 void sensor_cyclic(void const * argument)
 {
   /* USER CODE BEGIN sensor_cyclic */
@@ -338,7 +339,7 @@ void sensor_cyclic(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  sensor_cyclic_uart_check();
+	  joystick_cyclic_uart_check();
   }
   /* USER CODE END sensor_cyclic */
 }
@@ -350,6 +351,7 @@ void sensor_cyclic(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_gps_cyclic */
+/* SPI read*/
 void gps_cyclic(void const * argument)
 {
   /* USER CODE BEGIN gps_cyclic */
@@ -357,7 +359,7 @@ void gps_cyclic(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-	  gps_cyclic_uart_check();
+	  spi_cyclic_check();
   }
   /* USER CODE END gps_cyclic */
 }

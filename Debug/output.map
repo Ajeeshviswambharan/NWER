@@ -5435,12 +5435,12 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  .text.motor_cyclic_uart_check
                 0x08002f10       0x2c Src/user.o
                 0x08002f10                motor_cyclic_uart_check
- .text.sensor_cyclic_uart_check
+ .text.joystick_cyclic_uart_check
                 0x08002f3c       0x34 Src/user.o
-                0x08002f3c                sensor_cyclic_uart_check
- .text.gps_cyclic_uart_check
+                0x08002f3c                joystick_cyclic_uart_check
+ .text.spi_cyclic_check
                 0x08002f70       0x30 Src/user.o
-                0x08002f70                gps_cyclic_uart_check
+                0x08002f70                spi_cyclic_check
  .text.pir_iot_cyclic_check
                 0x08002fa0       0x30 Src/user.o
                 0x08002fa0                pir_iot_cyclic_check
@@ -6020,7 +6020,7 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_line    0x0000eee0      0x97d Src/user.o
  .debug_line    0x0000f85d       0x83 startup/startup_stm32f030x8.o
 
-.debug_str      0x00000000    0x515fd
+.debug_str      0x00000000    0x515fa
  .debug_str     0x00000000    0x46812 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
                               0x46aba (size before relaxing)
  .debug_str     0x00046812      0x1ef Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
@@ -6059,19 +6059,19 @@ OUTPUT(NWER.elf elf32-littlearm)
                               0x467be (size before relaxing)
  .debug_str     0x0005123c       0x12 Src/freertos.o
                               0x49757 (size before relaxing)
- .debug_str     0x0005124e      0x200 Src/main.o
-                              0x4c464 (size before relaxing)
- .debug_str     0x0005144e       0x1b Src/stm32f0xx_hal_msp.o
+ .debug_str     0x0005124e      0x1fd Src/main.o
+                              0x4c461 (size before relaxing)
+ .debug_str     0x0005144b       0x1b Src/stm32f0xx_hal_msp.o
                               0x46cba (size before relaxing)
- .debug_str     0x00051469       0x50 Src/stm32f0xx_hal_timebase_tim.o
+ .debug_str     0x00051466       0x50 Src/stm32f0xx_hal_timebase_tim.o
                               0x46c21 (size before relaxing)
- .debug_str     0x000514b9       0x56 Src/stm32f0xx_it.o
+ .debug_str     0x000514b6       0x56 Src/stm32f0xx_it.o
                               0x49b67 (size before relaxing)
- .debug_str     0x0005150f       0x5a Src/system_stm32f0xx.o
+ .debug_str     0x0005150c       0x5a Src/system_stm32f0xx.o
                               0x465b3 (size before relaxing)
- .debug_str     0x00051569       0x65 Src/user.o
-                              0x4bb7c (size before relaxing)
- .debug_str     0x000515ce       0x2f startup/startup_stm32f030x8.o
+ .debug_str     0x00051566       0x65 Src/user.o
+                              0x4bb79 (size before relaxing)
+ .debug_str     0x000515cb       0x2f startup/startup_stm32f030x8.o
                                  0x54 (size before relaxing)
 
 .comment        0x00000000       0x7f
