@@ -135,7 +135,7 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
 	                        wpoints[0].delay_value =2000;
 	                        wpoints[0].mode =INTIAL_MODE;
 	                        wpoints[0].n_longitude_value =6;
-	                        wpoints[0].n_latitude_value =6;
+	                        wpoints[0].stm_mode =RUNNING;
 	                        wpoints[0].prvious_index =0;
                 for(uint32_t i=1;i<TOTAL_POINTS;i++)
                     {
@@ -145,7 +145,7 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
                         wpoints[i].delay_value =2000;
                         wpoints[i].mode =INTIAL_MODE;
                         wpoints[i].n_longitude_value =6;
-                        wpoints[i].n_latitude_value =6;
+                        wpoints[i].stm_mode =RUNNING;
                         wpoints[i].prvious_index =i-1;
                     }
 

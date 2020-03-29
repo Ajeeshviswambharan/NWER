@@ -48,6 +48,21 @@ typedef enum
 	NIGHT
 }newr_mode;
 
+typedef enum
+{
+	N_NA = 0,
+	KITCHEN, 
+	BD1,
+	BD2,
+	SIT_OUT
+}newr_submode;
+
+typedef enum
+{
+	SLEEP = 0,
+	RUNNING, 
+	INTERRUPT
+}newr_STM_mode;
 
 typedef struct
 {
@@ -57,9 +72,10 @@ typedef struct
 	uint32_t delay_value;
 	newr_mode mode;
 	uint32_t n_longitude_value;
-	uint32_t n_latitude_value;
+	newr_STM_mode stm_mode;
 	uint32_t prvious_index;
 }waypoint_info;
+
 extern waypoint_info my_way_poits[TOTAL_POINTS];
 extern waypoint_info my_way_poits_r[TOTAL_POINTS];
 void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS]);
