@@ -39,14 +39,23 @@ typedef enum
 	ROTATE_LEFT,
 	REVERSE
 }wheel_heading;
+typedef enum
+{
+	CHARGING_M = 0,
+	INTIAL_MODE,
+	SERVICE_M,
+	CLEANING,
+	NIGHT
+}newr_mode;
+
 
 typedef struct
 {
 	uint32_t index;
 	wheel_heading my_wheel_heading;
 	int32_t heading_angle;
-	uint32_t c_longitude_value;
-	uint32_t c_latitude_value;
+	uint32_t delay_value;
+	newr_mode mode;
 	uint32_t n_longitude_value;
 	uint32_t n_latitude_value;
 	uint32_t prvious_index;

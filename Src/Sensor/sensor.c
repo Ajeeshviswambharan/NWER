@@ -39,10 +39,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   /* NOTE : This function should not be modified, when the callback is needed,
             the HAL_UART_RxCpltCallback can be implemented in the user file.
    */
-  /* Check for the Received value */
-  store_waypoit_D(my_way_poits);
-  MY_FLASH_SetSectorAddrs(15,0x0800F000);
-  MY_FLASH_WriteN(0,my_way_poits,TOTAL_POINTS,DATA_TYPE_32);
+
 //  MY_FLASH_ReadN(0,my_way_poits_r,TOTAL_POINTS,DATA_TYPE_32);//Read the Flahs values for GPS
     switch (my_uart_se)
     {
@@ -96,6 +93,10 @@ void message_handle(char *msg)
                 HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
                 HAL_UART_Transmit(&huart2,rxData_ledon,32,1);
                 my_uart_se=UART_CHECK;
+                  /* Check for the Received value */
+                store_waypoit_D(my_way_poits);
+                MY_FLASH_SetSectorAddrs(15,0x0800F000);
+                MY_FLASH_WriteN(0,my_way_poits,TOTAL_POINTS,DATA_TYPE_32);
             }
             else if(strstr(msg,"LED OFF")!=NULL)
                 {
@@ -131,8 +132,8 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
 							wpoints[0].index =0;
 	                        wpoints[0].my_wheel_heading =FORWARD;
 	                        wpoints[0].heading_angle =0;
-	                        wpoints[0].c_longitude_value =5;
-	                        wpoints[0].c_latitude_value =5;
+	                        wpoints[0].delay_value =2000;
+	                        wpoints[0].mode =INTIAL_MODE;
 	                        wpoints[0].n_longitude_value =6;
 	                        wpoints[0].n_latitude_value =6;
 	                        wpoints[0].prvious_index =0;
@@ -141,10 +142,10 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
                         wpoints[i].index =i;
                         wpoints[i].my_wheel_heading =REVERSE;
                         wpoints[i].heading_angle =360;
-                        wpoints[i].c_longitude_value =5;
-                        wpoints[i].c_latitude_value =5;
-                        wpoints[i].c_longitude_value =6;
-                        wpoints[i].c_latitude_value =6;
+                        wpoints[i].delay_value =2000;
+                        wpoints[i].mode =INTIAL_MODE;
+                        wpoints[i].n_longitude_value =6;
+                        wpoints[i].n_latitude_value =6;
                         wpoints[i].prvious_index =i-1;
                     }
 
