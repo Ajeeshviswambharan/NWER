@@ -50,12 +50,10 @@ typedef enum
 
 typedef enum
 {
-	N_NA = 0,
+	NO_SUB = 0,
 	KITCHEN, 
-	BD1,
-	BD2,
-	SIT_OUT
-}newr_submode;
+	BD1
+}newr_sub_mode;
 
 typedef enum
 {
@@ -71,8 +69,9 @@ typedef struct
 	int32_t heading_angle;
 	uint32_t delay_value;
 	newr_mode mode;
-	uint32_t n_longitude_value;
+	uint32_t demmy;
 	newr_STM_mode stm_mode;
+	newr_sub_mode mode_sub; 
 	uint32_t prvious_index;
 }waypoint_info;
 
