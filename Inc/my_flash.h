@@ -69,10 +69,10 @@ typedef struct
 	int32_t heading_angle;
 	uint32_t delay_value;
 	newr_mode mode;
-	uint32_t demmy;
+	uint32_t dummy;
 	newr_STM_mode stm_mode;
 	newr_sub_mode mode_sub; 
-	uint32_t prvious_index;
+	uint32_t previous_index;
 }waypoint_info;
 
 extern waypoint_info my_way_poits[TOTAL_POINTS];
