@@ -18,6 +18,7 @@ Description:
 */
 
 #include "stm32f0xx_hal.h"
+#include <stdbool.h>
 //Typedefs
 //1. data size
 #define TOTAL_POINTS 30
@@ -73,6 +74,7 @@ typedef struct
 	newr_STM_mode stm_mode;
 	newr_sub_mode mode_sub; 
 	uint32_t previous_index;
+	bool PIR_VALUE;
 }waypoint_info;
 
 extern waypoint_info my_way_poits[TOTAL_POINTS];

@@ -137,6 +137,7 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
 	                        wpoints[0].stm_mode =RUNNING;
                             wpoints[0].mode_sub = NO_SUB;
 	                        wpoints[0].previous_index =0;
+                            wpoints[0].PIR_VALUE = false;
                 for(uint32_t i=1;i<TOTAL_POINTS;i++)
                     {
                         wpoints[i].index =i;
