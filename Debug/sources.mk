@@ -23,5 +23,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
 Src/Sensor \
 Src/flash \
 Src \
+Src/motor \
+Src/spi \
 startup \
 

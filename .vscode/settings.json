@@ -3,6 +3,8 @@
         "main.h": "c",
         "cmsis_os.h": "c",
         "stm32f0xx_hal.h": "c",
-        "user.h": "c"
+        "user.h": "c",
+        "motor.h": "c",
+        "spi_header.h": "c"
     }
 }

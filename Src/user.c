@@ -15,6 +15,8 @@ uint8_t txData_motor[14]="Motor Cyclic\r\n";
 uint8_t txData_sensor[16]="Sensor Cyclic\r\n";
 uint8_t txData_gps[14]="SPI Cyclic\r\n";
 uint8_t txData_pir_iot[19]="PIR_IOT Cyclic\r\n";
+volatile uint8_t mode;
+volatile uint8_t submode;
 /*User functins updated here*****************************************/
 bool start_init(void) /*For check the Inital sensor status*/
 	{
@@ -44,7 +46,7 @@ void motor_cyclic_uart_check(void)  /*cyclic UART check for motor check must be 
 
         //HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,0);
 	   	HAL_UART_Transmit(&huart2,txData_motor,14,1);
-		motor_control(my_way_poits_r);
+		motor_control(my_way_poits_r,mode,submode);
 	    osDelay(2000);
     }
 void joystick_cyclic_uart_check(void)  /*cyclic UART,update for Joystick input*/
@@ -59,6 +61,7 @@ void spi_cyclic_check(void)  /*SPI Update*/
 	{
 		//HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
 		HAL_UART_Transmit(&huart2,txData_gps,14,1);
+		spi_update(&mode,&submode);
 		osDelay(2000);
 	}
 void pir_iot_cyclic_check(void)  /*cyclic pir_iot check*/

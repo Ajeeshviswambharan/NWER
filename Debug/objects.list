@@ -33,4 +33,6 @@
 "Src/syscalls.o"
 "Src/system_stm32f0xx.o"
 "Src/user.o"
+"Src/motor/motor.o"
+"Src/spi/spi.o"
 "startup/startup_stm32f030x8.o"

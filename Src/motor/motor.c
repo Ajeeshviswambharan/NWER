@@ -15,11 +15,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-void motor_control(waypoint_info nwer_info[WAY_DETAILS])
+void motor_control(waypoint_info nwer_info[WAY_DETAILS],uint8_t mode,uint8_t mode_sub)
 {
     if((nwer_info[0].PIR_VALUE==false) &&(nwer_info[0].stm_mode==RUNNING))
     {
-    	if(nwer_info[0].mode==INTIAL_MODE)
+    	if(mode==INTIAL_MODE)
     	{
     		forward();
     	}

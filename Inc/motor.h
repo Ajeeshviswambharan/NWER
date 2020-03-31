@@ -1,7 +1,7 @@
 
 /* Private includes ----------------------------------------------------------*/
-#include "my_flash.h"
-#include <stdbool.h>
+#include "user.h"
+
 
 /* USER CODE BEGIN Includes */
 /* Exported macro ------------------------------------------------------------*/
@@ -11,7 +11,7 @@
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void motor_control(waypoint_info nwer_info[WAY_DETAILS]);
+void motor_control(waypoint_info nwer_info[WAY_DETAILS],uint8_t mode,uint8_t mode_sub);
 void forward();
 void backward();
 void leftturn();
