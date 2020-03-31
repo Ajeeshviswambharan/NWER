@@ -44,6 +44,7 @@ void motor_cyclic_uart_check(void)  /*cyclic UART check for motor check must be 
 
         //HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,0);
 	   	HAL_UART_Transmit(&huart2,txData_motor,14,1);
+		motor_control(my_way_poits_r);
 	    osDelay(2000);
     }
 void joystick_cyclic_uart_check(void)  /*cyclic UART,update for Joystick input*/
