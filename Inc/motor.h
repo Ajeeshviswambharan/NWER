@@ -12,3 +12,9 @@
 
 /* Exported functions prototypes ---------------------------------------------*/
 void motor_control(waypoint_info nwer_info[WAY_DETAILS]);
+void forward();
+void backward();
+void leftturn();
+void rightturn();
+void turnaround();
+void stop();

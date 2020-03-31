@@ -21,7 +21,36 @@ void motor_control(waypoint_info nwer_info[WAY_DETAILS])
     {
     	if(nwer_info[0].mode==INTIAL_MODE)
     	{
-        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+    		forward();
     	}
     }
+    else
+    {
+    	stop();
+    }
+}
+
+void forward()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+}
+void backward()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+}
+void leftturn()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+}
+void rightturn()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+}
+void turnaround()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+}
+void stop()
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,0);
 }
