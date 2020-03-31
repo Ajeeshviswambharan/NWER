@@ -15,20 +15,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-void motor_control(waypoint_info nwer_info[WAY_DETAILS],uint8_t mode,uint8_t mode_sub)
-{
-    if((nwer_info[0].PIR_VALUE==false) &&(nwer_info[0].stm_mode==RUNNING))
-    {
-    	if(mode==INTIAL_MODE)
-    	{
-    		forward();
-    	}
-    }
-    else
-    {
-    	stop();
-    }
-}
+
+
+    
+
 
 void forward()
 {
@@ -53,4 +43,35 @@ void turnaround()
 void stop()
 {
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,0);
+}
+
+
+void motor_control(waypoint_info nwer_info[WAY_DETAILS],uint8_t mode,uint8_t mode_sub)
+{
+    uint8_t mode_select,sub_mode_select;
+    mode_select=mode;
+    switch (mode_select)
+    {
+    case INTIAL_MODE:/* constant-expression */
+        /* Initial mode detected*/
+        if((nwer_info[0].PIR_VALUE==false) &&(nwer_info[0].stm_mode==RUNNING))
+        {
+    		forward();
+            osDelay(2000);
+            stop();
+            osDelay(2000);
+
+        }
+        else
+        {
+    	stop();
+        }
+        break;
+
+    default:
+        break;
+    }
+
+
+
 }
