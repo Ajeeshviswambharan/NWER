@@ -22,6 +22,8 @@ typedef enum
 
 extern volatile uint8_t mode;
 extern volatile uint8_t submode;
+extern volatile uint8_t fs_status;
+
 extern UART_HandleTypeDef huart2;
 /* DMA Handler */
 extern DMA_HandleTypeDef hdma_usart2_rx;

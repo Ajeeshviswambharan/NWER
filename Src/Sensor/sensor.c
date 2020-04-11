@@ -15,6 +15,7 @@
 /* Private variables ---------------------------------------------------------*/
 static Uart_Statemachine my_uart_se=UART_CHECK;
 char rx_buffer_gps[25];
+uint32_t w_points;
 uint8_t rxData_ledon[32]="ONE RECEIVED SO LED WILL ON\r\n";
 uint8_t rxData_ledoz[33]="ZERO RECEIVED SO LED WILL OFF\r\n";
 uint8_t rxData_ledou[17]="UNKNOWN ENTRY\r\n";
@@ -27,6 +28,7 @@ void gps_valuereceive(void)/* GPS value read */
 	{
 	/* Three byte Intiator and size taking command*/
 		HAL_UART_Receive_DMA(&huart2,(uint8_t *)rx_buffer_gps,3);
+        store_waypoit_D(&my_way_poits);
 	}
 
 
@@ -94,7 +96,6 @@ void message_handle(char *msg)
                 HAL_UART_Transmit(&huart2,rxData_ledon,32,1);
                 my_uart_se=UART_CHECK;
                   /* Check for the Received value */
-                store_waypoit_D(my_way_poits);
                 MY_FLASH_SetSectorAddrs(15,0x0800F000);
                 MY_FLASH_WriteN(0,my_way_poits,TOTAL_POINTS,DATA_TYPE_32);
             }
@@ -129,25 +130,132 @@ void revert_state()//used to clear buffer and revert the state if UART_UNK state
 
 void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
     {
-							wpoints[0].index =0;
-	                        wpoints[0].my_wheel_heading =FORWARD;
-	                        wpoints[0].heading_angle =0;
-	                        wpoints[0].delay_value =2000;
-	                        //wpoints[0].mode =INTIAL_MODE;
-	                        wpoints[0].stm_mode =RUNNING;
-                            //wpoints[0].mode_sub = NO_SUB;
-	                        wpoints[0].previous_index =0;
-                            wpoints[0].PIR_VALUE = false;
-                for(uint32_t i=1;i<TOTAL_POINTS;i++)
-                    {
-                        wpoints[i].index =i;
-                        wpoints[i].my_wheel_heading =REVERSE;
-                        wpoints[i].heading_angle =360;
-                        wpoints[i].delay_value =2000;
-                        //wpoints[i].mode =INTIAL_MODE;
-                        wpoints[i].stm_mode =RUNNING;
-                        //wpoints[i].mode_sub = BD1;
-                        wpoints[i].previous_index =i-1;
-                    }
+    // init_update(&wpoints[WAY_DETAILS]);
+    //kitchen_update(&wpoints[WAY_DETAILS]);
+        for(w_points=INIT_START;w_points<INIT_END;w_points++)
+        {        
+		 wpoints[w_points].index =w_points;
+	     wpoints[w_points].delay_value =2000;
+	     wpoints[w_points].previous_index =w_points-1;
 
+            if(w_points==(INIT_START+4u))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_RIGHT;
+	        wpoints[w_points].heading_angle =90;
+
+            }
+            else if (w_points==(INIT_START+9u))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_LEFT;
+	        wpoints[w_points].heading_angle =90;
+            }
+            else
+            {
+            wpoints[w_points].my_wheel_heading =FORWARD;
+	        wpoints[w_points].heading_angle =0;
+            }
+        }
+        for(w_points=KITCHEN_START;w_points<KITCHEN_END;w_points++)
+        {
+        wpoints[w_points].index =w_points;
+	    wpoints[w_points].delay_value =0xFFFF;
+	    wpoints[w_points].previous_index =w_points-1;
+            if(w_points==KITCHEN_START)
+            {
+            wpoints[w_points].my_wheel_heading =BACK_ROTATION;
+	        wpoints[w_points].heading_angle =180;
+            }
+            else if ((w_points==(KITCHEN_START+3u)) || (w_points==(KITCHEN_START+9u)) || (w_points==(KITCHEN_START+18u)))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_RIGHT;
+	        wpoints[w_points].heading_angle =90;
+            }
+            else if(w_points==(KITCHEN_START+12u))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_LEFT;
+	        wpoints[w_points].heading_angle =90;
+            }
+            else
+            {
+            wpoints[w_points].my_wheel_heading =FORWARD;
+	        wpoints[w_points].heading_angle =0;
+            }
+        }
     }
+
+
+void sensor_status_update(uint8_t *fs_status)
+{
+    /* PIN PA0 read for sensor value */
+    if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0)==GPIO_PIN_SET)
+	{
+	    *fs_status=true;
+
+	}
+	else
+	{
+	    *fs_status=false;
+    }
+
+}
+void init_update(waypoint_info wpoints[WAY_DETAILS])
+{
+        
+
+        for(int w_points=INIT_START;w_points<INIT_END;w_points++)
+        {        
+		wpoints[w_points].index =w_points;
+	    wpoints[w_points].delay_value =2000;
+	    wpoints[w_points].previous_index =w_points-1;
+
+            if(w_points==(INIT_START+4u))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_RIGHT;
+	        wpoints[w_points].heading_angle =90;
+
+            }
+            else if (w_points==(INIT_START+9u))
+            {
+            wpoints[w_points].my_wheel_heading =ROTATE_LEFT;
+	        wpoints[w_points].heading_angle =90;
+            }
+            else
+            {
+            wpoints[w_points].my_wheel_heading =FORWARD;
+	        wpoints[w_points].heading_angle =0;
+            }
+       }
+
+       
+}
+
+//void kitchen_update(waypoint_info *wpoints[WAY_DETAILS])
+//{
+//    for(w_points=KITCHEN_START;w_points<KITCHEN_END;w_points++)
+//    {
+//    wpoints[w_points]->index =w_points;
+//	wpoints[w_points]->delay_value =2000;
+//	wpoints[w_points]->previous_index =wpoints[w_points]->index-1;
+//        if(w_points==KITCHEN_START)
+//        {
+//        wpoints[w_points]->my_wheel_heading =BACK_ROTATION;
+//	    wpoints[w_points]->heading_angle =180;
+//        }
+//        else if ((w_points==(KITCHEN_START+3u)) || (w_points==(KITCHEN_START+9u)) || (w_points==(KITCHEN_START+18u)))
+//        {
+//        wpoints[w_points]->my_wheel_heading =ROTATE_RIGHT;
+//	    wpoints[w_points]->heading_angle =90;
+//        }
+//        else if(w_points==(KITCHEN_START+12u))
+//        {
+//        wpoints[w_points]->my_wheel_heading =ROTATE_LEFT;
+//	    wpoints[w_points]->heading_angle =90;
+//        }
+//        else
+//        {
+//        wpoints[w_points]->my_wheel_heading =FORWARD;
+//	    wpoints[w_points]->heading_angle =0;
+//        }
+//    }
+//
+//}

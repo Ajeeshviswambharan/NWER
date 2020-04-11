@@ -22,7 +22,7 @@ Description:
 //Typedefs
 //1. data size
 #define TOTAL_POINTS 	30
-#define WAY_DETAILS 	7
+#define WAY_DETAILS 	5
 
 typedef enum
 {
@@ -38,7 +38,7 @@ typedef enum
 	BACKWARD,
 	ROTATE_RIGHT,
 	ROTATE_LEFT,
-	REVERSE
+	BACK_ROTATION
 }wheel_heading;
 
 typedef enum
@@ -55,9 +55,7 @@ typedef struct
 	int32_t heading_angle;
 	uint32_t delay_value;	
 	uint32_t dummy;
-	newr_STM_mode stm_mode; 
 	uint32_t previous_index;
-	bool PIR_VALUE;
 }waypoint_info;
 
 
