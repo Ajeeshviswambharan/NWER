@@ -24,7 +24,7 @@ Common symbol       size              file
 
 motorHandle         0x4               Src/main.o
 hdma_usart2_rx      0x44              Src/main.o
-my_way_poits        0x2d0             Src/Sensor/sensor.o
+my_way_poits        0x4b0             Src/Sensor/sensor.o
 way_numer           0x1               Src/motor/motor.o
 rx_buffer_gps       0x19              Src/Sensor/sensor.o
 uwTick              0x4               Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
@@ -34,7 +34,7 @@ pFlash              0x20              Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx
 htim3               0x40              Src/stm32f0xx_hal_timebase_tim.o
 PIR_IOTHandle       0x4               Src/main.o
 mode                0x1               Src/user.o
-my_way_poits_r      0x2d0             Src/Sensor/sensor.o
+my_way_poits_r      0x4b0             Src/Sensor/sensor.o
 GPS_ValueHandle     0x4               Src/main.o
 submode             0x1               Src/user.o
 w_points            0x4               Src/Sensor/sensor.o
@@ -5933,7 +5933,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  .igot.plt      0x200000e0        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
                 0x200000e0                . = ALIGN (0x4)
 
-.bss            0x200000e0     0x1460 load address 0x080033b4
+.bss            0x200000e0     0x1820 load address 0x080033b4
                 0x200000e0                _sbss = .
                 0x200000e0                __bss_start__ = _sbss
  *(.bss)
@@ -5951,43 +5951,43 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
  *fill*         0x20000e4c        0x4 
  COMMON         0x20000e50       0x20 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.o
                 0x20000e50                pFlash
- COMMON         0x20000e70      0x5c0 Src/Sensor/sensor.o
+ COMMON         0x20000e70      0x980 Src/Sensor/sensor.o
                 0x20000e70                my_way_poits
-                0x20001140                rx_buffer_gps
-                0x2000115c                my_way_poits_r
-                0x2000142c                w_points
- COMMON         0x20001430       0xc8 Src/main.o
-                0x20001430                motorHandle
-                0x20001434                hdma_usart2_rx
-                0x20001478                PIR_IOTHandle
-                0x2000147c                GPS_ValueHandle
-                0x20001480                huart2
-                0x200014f0                uart_checkHandle
-                0x200014f4                sensorHandle
- COMMON         0x200014f8       0x40 Src/stm32f0xx_hal_timebase_tim.o
-                0x200014f8                htim3
- COMMON         0x20001538        0x3 Src/user.o
-                0x20001538                fs_status
-                0x20001539                mode
-                0x2000153a                submode
- COMMON         0x2000153b        0x2 Src/motor/motor.o
-                0x2000153b                way_numer
-                0x2000153c                way_numer_backup
-                0x20001540                . = ALIGN (0x4)
- *fill*         0x2000153d        0x3 
-                0x20001540                _ebss = .
-                0x20001540                __bss_end__ = _ebss
+                0x20001320                rx_buffer_gps
+                0x2000133c                my_way_poits_r
+                0x200017ec                w_points
+ COMMON         0x200017f0       0xc8 Src/main.o
+                0x200017f0                motorHandle
+                0x200017f4                hdma_usart2_rx
+                0x20001838                PIR_IOTHandle
+                0x2000183c                GPS_ValueHandle
+                0x20001840                huart2
+                0x200018b0                uart_checkHandle
+                0x200018b4                sensorHandle
+ COMMON         0x200018b8       0x40 Src/stm32f0xx_hal_timebase_tim.o
+                0x200018b8                htim3
+ COMMON         0x200018f8        0x3 Src/user.o
+                0x200018f8                fs_status
+                0x200018f9                mode
+                0x200018fa                submode
+ COMMON         0x200018fb        0x2 Src/motor/motor.o
+                0x200018fb                way_numer
+                0x200018fc                way_numer_backup
+                0x20001900                . = ALIGN (0x4)
+ *fill*         0x200018fd        0x3 
+                0x20001900                _ebss = .
+                0x20001900                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20001540      0x600 load address 0x080033b4
-                0x20001540                . = ALIGN (0x8)
-                0x20001540                PROVIDE (end = .)
+                0x20001900      0x600 load address 0x080033b4
+                0x20001900                . = ALIGN (0x8)
+                0x20001900                PROVIDE (end = .)
                 [!provide]                PROVIDE (_end = .)
-                0x20001740                . = (. + _Min_Heap_Size)
- *fill*         0x20001540      0x200 
-                0x20001b40                . = (. + _Min_Stack_Size)
- *fill*         0x20001740      0x400 
-                0x20001b40                . = ALIGN (0x8)
+                0x20001b00                . = (. + _Min_Heap_Size)
+ *fill*         0x20001900      0x200 
+                0x20001f00                . = (. + _Min_Stack_Size)
+ *fill*         0x20001b00      0x400 
+                0x20001f00                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -6073,7 +6073,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x00000682       0x1e c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
 OUTPUT(NWER.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x214cb
+.debug_info     0x00000000    0x214cd
  .debug_info    0x00000000      0xe5c Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o
  .debug_info    0x00000e5c      0xfd1 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.o
  .debug_info    0x00001e2d     0x1028 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.o
@@ -6090,18 +6090,18 @@ OUTPUT(NWER.elf elf32-littlearm)
  .debug_info    0x00012827     0x23ee Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_info    0x00014c15      0x2a9 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o
  .debug_info    0x00014ebe      0xba7 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x00015a65     0x143c Src/Sensor/sensor.o
- .debug_info    0x00016ea1      0xd84 Src/flash/my_flash.o
- .debug_info    0x00017c25      0x956 Src/freertos.o
- .debug_info    0x0001857b     0x1dd5 Src/main.o
- .debug_info    0x0001a350     0x129f Src/stm32f0xx_hal_msp.o
- .debug_info    0x0001b5ef     0x110f Src/stm32f0xx_hal_timebase_tim.o
- .debug_info    0x0001c6fe      0xe1e Src/stm32f0xx_it.o
- .debug_info    0x0001d51c      0xa74 Src/system_stm32f0xx.o
- .debug_info    0x0001df90     0x133e Src/user.o
- .debug_info    0x0001f2ce     0x1216 Src/motor/motor.o
- .debug_info    0x000204e4      0xfc5 Src/spi/spi.o
- .debug_info    0x000214a9       0x22 startup/startup_stm32f030x8.o
+ .debug_info    0x00015a65     0x143d Src/Sensor/sensor.o
+ .debug_info    0x00016ea2      0xd84 Src/flash/my_flash.o
+ .debug_info    0x00017c26      0x956 Src/freertos.o
+ .debug_info    0x0001857c     0x1dd6 Src/main.o
+ .debug_info    0x0001a352     0x129f Src/stm32f0xx_hal_msp.o
+ .debug_info    0x0001b5f1     0x110f Src/stm32f0xx_hal_timebase_tim.o
+ .debug_info    0x0001c700      0xe1e Src/stm32f0xx_it.o
+ .debug_info    0x0001d51e      0xa74 Src/system_stm32f0xx.o
+ .debug_info    0x0001df92     0x133e Src/user.o
+ .debug_info    0x0001f2d0     0x1216 Src/motor/motor.o
+ .debug_info    0x000204e6      0xfc5 Src/spi/spi.o
+ .debug_info    0x000214ab       0x22 startup/startup_stm32f030x8.o
 
 .debug_abbrev   0x00000000     0x4806
  .debug_abbrev  0x00000000      0x2f6 Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.o

@@ -21,7 +21,7 @@ Description:
 #include <stdbool.h>
 //Typedefs
 //1. data size
-#define TOTAL_POINTS 	30
+#define TOTAL_POINTS 	50
 #define WAY_DETAILS 	5
 
 typedef enum
