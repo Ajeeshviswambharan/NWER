@@ -190,9 +190,11 @@ void sensor_status_update(uint8_t *fs_status)
     if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0)==GPIO_PIN_SET)
 	{
 	    *fs_status=true;
+         stop();
 
 	}
 	else
+
 	{
 	    *fs_status=false;
     }

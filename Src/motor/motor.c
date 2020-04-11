@@ -56,17 +56,30 @@ void motor_control(waypoint_info nwer_info[WAY_DETAILS],uint8_t mode,uint8_t mod
     case INTIAL_MODE:/* constant-expression */
         /* Initial mode detected*/
     	{
-            if((fs_status==false)&&(way_numer<=3))
-            {
-    		    forward();
-                osDelay(2000);
-                way_numer++;
+                for(int w_points=INIT_START;w_points<INIT_END;w_points++)
+                {        
+                    if((fs_status==false) && (nwer_info[w_points].my_wheel_heading == FORWARD) && (nwer_info[w_points].heading_angle == 0)) 
+                    { 
+    		        forward();
+                    osDelay(2000);
+                    }
+                    else if((fs_status==false) && (nwer_info[w_points].my_wheel_heading == ROTATE_RIGHT) && (nwer_info[w_points].heading_angle == 90)) 
+                    { 
+    		        rightturn();
+                    osDelay(2000);
+                    }
+                    else if((fs_status==false) && (nwer_info[w_points].my_wheel_heading == ROTATE_LEFT) && (nwer_info[w_points].heading_angle == 90)) 
+                    { 
+    		        leftturn();
+                    osDelay(2000);
+                    }
+                    else
+                    {
+                    stop();                        
+                    }
+                    
+                }
 
-            }
-            else
-            {
-            	stop();
-            }
         }
 
         break;

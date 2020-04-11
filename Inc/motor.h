@@ -1,6 +1,6 @@
 
 /* Private includes ----------------------------------------------------------*/
-#include "user.h"
+#include "sensor.h"
 
 
 /* USER CODE BEGIN Includes */

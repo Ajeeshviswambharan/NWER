@@ -1,5 +1,6 @@
 Src/motor/motor.o: ../Src/motor/motor.c \
  F:/Project/Projects_STM32/NWER/Inc/motor.h \
+ F:/Project/Projects_STM32/NWER/Inc/sensor.h \
  F:/Project/Projects_STM32/NWER/Inc/user.h \
  F:/Project/Projects_STM32/NWER/Inc/main.h \
  F:/Project/Projects_STM32/NWER/Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
@@ -49,6 +50,8 @@ Src/motor/motor.o: ../Src/motor/motor.c \
  F:/Project/Projects_STM32/NWER/Inc/my_flash.h
 
 F:/Project/Projects_STM32/NWER/Inc/motor.h:
+
+F:/Project/Projects_STM32/NWER/Inc/sensor.h:
 
 F:/Project/Projects_STM32/NWER/Inc/user.h:
 
