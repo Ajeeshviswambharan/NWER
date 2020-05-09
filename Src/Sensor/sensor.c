@@ -16,6 +16,7 @@
 static Uart_Statemachine my_uart_se=UART_CHECK;
 char rx_buffer_gps[25];
 uint32_t w_points;
+uint8_t pin_status;
 uint8_t rxData_ledon[32]="ONE RECEIVED SO LED WILL ON\r\n";
 uint8_t rxData_ledoz[33]="ZERO RECEIVED SO LED WILL OFF\r\n";
 uint8_t rxData_ledou[17]="UNKNOWN ENTRY\r\n";
@@ -187,7 +188,9 @@ void store_waypoit_D(waypoint_info wpoints[WAY_DETAILS])
 void sensor_status_update(uint8_t *fs_status)
 {
     /* PIN PA0 read for sensor value */
-    if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0)==GPIO_PIN_SET)
+    osDelay(10);
+	pin_status=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0);
+    if(pin_status==GPIO_PIN_SET)
 	{
 	    *fs_status=true;
          stop();
