@@ -2,7 +2,7 @@
 *.hex
 *.o
 *.map
-Debug/NWER.elf
-Debug/NWER.hex
-Debug/output.map
-Debug/Src/Sensor/*.o
+/Debug/NWER.elf
+/Debug/NWER.hex
+/Debug/output.map
+/Debug/Src/Sensor/*.o
