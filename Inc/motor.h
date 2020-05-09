@@ -5,6 +5,8 @@
 
 /* USER CODE BEGIN Includes */
 /* Exported macro ------------------------------------------------------------*/
+#define ON          1u
+#define OFF         0u
 extern uint8_t way_numer;
 extern uint8_t way_numer_backup;
 

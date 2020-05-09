@@ -23,23 +23,23 @@ uint8_t way_numer_backup;
 
 void forward()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,ON);
 }
 void backward()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,ON);
 }
 void leftturn()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,ON);
 }
 void rightturn()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,ON);
 }
 void turnaround()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,1);
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,OFF);
 }
 void stop()
 {
